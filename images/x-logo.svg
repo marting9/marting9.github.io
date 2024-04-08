@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 281.24 281.24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #152a38;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="items">
+    <circle id="circle" class="cls-1" cx="140.62" cy="140.62" r="140.62"/>
+    <path id="twitter_logo" data-name="twitter logo" class="cls-2" d="m232.94,228.08h-54.28l-51.12-68.6-63.87,68.6h-15.37l72.48-77.67L48.3,53.16h53.31l49.01,65.28,60.92-65.28h14.98l-69.15,74.27,75.57,100.65Zm-47.67-12.26h24.91L96.94,64.64h-25.49l113.82,151.18Z"/>
+  </g>
+</svg>
