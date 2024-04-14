@@ -134,7 +134,7 @@ footer {
     align-items: center;
     justify-content: flex-end;
 
-    background-image: url(./images/Banner_desktop.png);
+    background-image: url(./images/Banner_mobile.png);
     background-repeat: no-repeat;
     background-size: cover; 
 }
@@ -146,105 +146,54 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 30%;
+    width: 60%;
 }
 /* fin ok*/
-
-
-
-
-
-
-/*Celular*/
-@media screen and (width <= 767px){
-    footer {
-        background-image: url(./images/Banner_mobile.png);
-        background-repeat: no-repeat;
-        background-size: cover;  
-    }
-    .social-media {
-        width: 60%;
-    }
-}
-/*Tablet*/
-@media screen and (768px <= width <= 1023px){
+@media screen and (600px < width <= 1200px){
     .banner {
         background-image: url(./images/Banner_desktop.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 600px;
-        padding: 40px 60px;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
     }    
-    h1 {
-        color: azure;
-        font-family: "Lato", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-    }
-}
-/*Desktop*/
-@media screen and (1024px <= width <= 1200px){
-    .banner {
-        background-image: url(./images/Banner_desktop.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 600px;
-        padding: 40px 60px;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-around;
-    }    
-    h1 {
-        color: azure;
-        font-family: "Lato", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-    }
     .features {
-        padding: 30px 20px;
+        height: auto;
     }
     .features-container {
-        justify-content: space-around;
-        padding: 0 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .who-we-are img {
+        clip-path: none;
+        width: 100%;
+        height: auto;
+    }
+    .slider-container div:first-child {
+        margin-left: 5%;
+    }
+    .slider-container div:last-child {
+        margin-right: 5%;
     }
 }
+
 /*Desktop wide*/
 @media screen and (width > 1201px){
     .banner {
         background-image: url(./images/Banner_desktop.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: 1px 6px 11px 0px rgba(128,128,128,0.43);
         max-width: 1200px;
-        height: 600px;
-        padding: 40px 60px;
         margin: auto;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-around;
     }    
-    h1 {
-        color: azure;
-        font-family: "Lato", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-        text-align: center;
-    }
     .features {
         max-width: 1200px;
         margin: auto;
+        height: auto ;
+        padding: 15px 0px;
     }
     .features-container {
+        height: auto;
+        flex-direction: row;
         justify-content: space-around;
         padding: 0 10%;
     }
