@@ -237,7 +237,12 @@ footer p {
         margin: auto;
     }
 }
-
+@media screen and (width > 2200px){
+    .logo {
+        left: 30%;
+        top: 5%;
+    }
+}
 @keyframes banner-animation {
 	0%,
 	100% {
