@@ -66,20 +66,23 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 18px 20px;
-    color: whitesmoke;
-    background-color: #246B8C;
+    padding-top: 18px;
     box-shadow: 1px 6px 11px 0px rgba(128,128,128,0.43);
 }
 .who-we-are h2 {
     margin-bottom: 18px;
 }
 .who-we-are img {
-    opacity: 0.8;
-    clip-path: polygon(2.5% 0, 97.5% 0, 97.5% 100%, 2.5% 100%);
+    opacity: 0.8; 
+    width: 100%;
 }
-.who-we-are p {
-    margin: 15px 0px 5px 0px;
+.wwa-content {
+    padding: 3% 2%;
+    color: whitesmoke;
+    background-color: #246B8C;
+}
+.wwa-content p {
+    margin: 10px 0px;
 }
 .reviews {
     display: flex;
@@ -92,7 +95,7 @@ h1 {
 }
 .slider-container {
     display: flex;
-    width: 100%;
+    width: 80%;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
@@ -145,11 +148,11 @@ footer p {
 .social-media {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 60%;
 }
 /* fin ok*/
-@media screen and (600px < width <= 1200px){
+@media screen and (600px < width <= 1201px){
     .banner {
         background-image: url(./images/Banner_desktop.png);
     }    
@@ -163,8 +166,13 @@ footer p {
     }
     .who-we-are img {
         clip-path: none;
-        width: 100%;
         height: auto;
+    }
+    .wwa-content {
+        padding: 1% 2%;
+    }
+    .slider-container {
+        width: 95%;
     }
     .slider-container div:first-child {
         margin-left: 5%;
@@ -173,7 +181,6 @@ footer p {
         margin-right: 5%;
     }
 }
-
 /*Desktop wide*/
 @media screen and (width > 1201px){
     .banner {
@@ -185,6 +192,12 @@ footer p {
         align-items: center;
         justify-content: space-around;
     }    
+    .logo {
+        width: 100%;
+        position: absolute;
+        left: 25%;
+        top: 5%;
+    }
     .features {
         max-width: 1200px;
         margin: auto;
@@ -201,17 +214,32 @@ footer p {
         max-width: 1200px;
         margin: auto;
     }
+    .who-we-are img {
+        height: 775px;
+    }
+    .wwa-content {
+        padding: 1% 2%;
+    }
     .reviews {
         max-width: 1200px;
         margin: auto;
+    }
+    .slider-container {
+        width: 95%;
+        overflow-x: auto;
+        scroll-snap-type: none;
+    }
+    .slider-container div:first-child {
+        margin-left: 0px;
+    }
+    .slider-container div:last-child {
+        margin-right: 0px;
     }
     footer {
         max-width: 1200px;
         margin: auto;
     }
 }
-
-
 
 @keyframes banner-animation {
 	0%,
