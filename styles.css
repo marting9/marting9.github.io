@@ -8,7 +8,6 @@
     font-weight: 400;
     font-style: normal;
 }
-/*ok*/
 .banner {
     background-image: url(./images/Banner_mobile.png);
     opacity: 0.95;
@@ -150,7 +149,6 @@ footer p {
     justify-content: space-evenly;
     width: 60%;
 }
-/* fin ok*/
 @media screen and (600px < width <= 1201px){
     .banner {
         background-image: url(./images/Banner_desktop.png);
@@ -249,7 +247,6 @@ footer p {
 		transform: translateX(0%);
 		transform-origin: 50% 50%;
 	}
-
 	15% {
 		transform: translateX(-30px) rotate(-6deg);
 	}
