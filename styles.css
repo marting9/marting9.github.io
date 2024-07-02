@@ -74,3 +74,8 @@
         font-size: 14px;
     }
 }
+@media screen and (width < 450px){
+    .text-footer {
+        font-size: 12px;
+    }
+}
