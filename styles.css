@@ -132,8 +132,7 @@
 .mas-informacion img {
     clip-path: circle(45% at 50% 53%);
 }
-
-@media (max-width: 768px) { 
+@media (max-width: 1200px) {
     .navbar-nav {
         position: absolute;
         top: 76px;
@@ -142,6 +141,8 @@
         background-color: #343a40;
         text-align: right; 
     }
+}
+@media (max-width: 768px) { 
     .contenedor {
         width: 100%;
     }
