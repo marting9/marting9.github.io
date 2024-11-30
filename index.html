@@ -1,225 +1,150 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Martin Gimenez - Maquetado y desarrollo web - DMN2BV 2024</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-   
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mi billetera</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <header id="home">
-        <nav class="navbar navbar-expand-xl bg-dark mw-100" data-bs-theme="dark">
-            <div class="container">
-                <a class="navbar-brand">
-                    <img src="./images/logo-becuadro.svg" height="60" alt="logo marca becuadro">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="main()">
+    <div class="container-lg contenedor">
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark" style="height: 77px;">
+            <div class="container-fluid">
+              <a class="navbar-brand ms-4" href="#">
+                <img src="/./recursos/Logo.svg" alt="Mi billetera logo" height="25">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white fs-6 pe-3" aria-current="page" href="#home">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fs-6 pe-3" href="#section2">Por qué elegirnos?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fs-6 pe-3" href="#section3">Quiénes somos?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fs-6 pe-3" href="#section4">Contactanos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white fs-6 pe-3" href="#section5">Nuestro canal</a>
-                        </li>
-                    </ul>
-                </div>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="navlist">
+                </ul>
+              </div>
             </div>
         </nav>
-        <div id="carouselHome" class="carousel carousel-light slide carousel-fade bg-dark" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselHome" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item carousel-item-custom active" data-bs-interval="5000">
-                    <img src="images/banner-img1_.jpg" class="d-block w-100" alt="ideas">
-                    <div class="carousel-caption carousel-caption-custom text-white">
-                    <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 0.5s;">Ideas</h5>
-                    <p class="animate__animated animate__bounceInLeft d-none d-md-block" style="animation-delay: 1s;">Creemos en la participación de nuestros clientes en el proceso de ideación.</p>
-                    <p class="animate__animated animate__bounceInRight" style="animation-delay: 2s;"><a href="#">Ver más</a></p>
+        <div class="contenedor-contenido text-white" id="contenido">
+            <div class="billetera" id="seccion-billetera">
+                <div class="bloque-1" id="bloque1">
+                    <h1>Mi billetera</h1>
+                    <div class="mb-1 form" id="formulario">
+                        <p>Registra tus ingresos y gastos para hacer un seguimiento de tus cuentas.
+                            Planifica tus objetivos para mejorar tus finanzas
+                        </p>
+                        <p>Empecemos por lo básico</p>
+                        <label for="inputNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputNombre" placeholder="Tu nombre">
+                        <div style="margin-top: 15px">
+                            <p>Tu objetivo</p>
+                            <select class="form-select" aria-label="Default select example" id="objetivo">
+                                <option selected>Elegí de la lista</option>
+                                <option value="1">Ahorrar</option>
+                                <option value="2">Reducir gastos</option>
+                                <option value="3">Seguimiento</option>
+                            </select>
+                        </div>
+                        <button type="button" class="shadow btn btn-danger btn-sm" style="margin-top: 35px; background-color: #FF9E19; border: none; width: 60%;" onclick="crearBilletera()">Crear billetera</button>
+                    </div>
+                    <div class="mb-1 flex-column" id="billetera">
+                        <p>Acá podés ver tu balance, tus ingresos y tus gastos.
+                        </p>
+                        <div class="contenedor-billetera" id="cards">
+                            <div class="card text-bg-light justify-content-center align-items-center mb-3 card-balance" id="balance">
+                                <p>Balance</p>
+                                <p>$0,00</p>
+                                <a>Ver detalle</a>
+                            </div>
+                            <div class="card text-bg-light justify-content-center align-items-center mb-3 card-ingresos-gastos" id="ingresos">
+                                <p>Todavia no tenes movimientos</p>
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar nuevo</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item carousel-item-custom" data-bs-interval="5000">
-                    <img src="images/banner-img2_.jpg" class="d-block w-100" alt="diseño">
-                    <div class="carousel-caption carousel-caption-custom text-white">
-                        <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 0.5s;">Diseño</h5>
-                        <p class="animate__animated animate__bounceInLeft d-none d-md-block" style="animation-delay: 1s;">Co-creamos diseños innovadores y basados en la gran trayectoria de nuestro equipo.</p>
-                        <p class="animate__animated animate__bounceInRight" style="animation-delay: 2s;"><a href="#">Ver más</a></p>
-                    </div>
-                </div>
-                <div class="carousel-item carousel-item-custom" data-bs-interval="5000">
-                    <img src="images/banner-img3_.jpg" alt="quienes somos?" class="d-block w-100" >
-                    <div class="carousel-caption carousel-caption-custom text-light">
-                        <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 0.5s;">Proyectos</h5>
-                        <p class="animate__animated animate__bounceInLeft d-none d-md-block" style="animation-delay: 1s;">Planificamos proyectos realistas, con un norte completamente definido y una mirada enfocada 100% en nuestros clientes.</p>
-                        <p class="animate__animated animate__bounceInRight" style="animation-delay: 2s;"><a href="#">Ver más</a></p>
-                    </div>
-                </div>
-                <div class="carousel-item carousel-item-custom" data-bs-interval="5000">
-                    <img src="images/banner-img4_.jpg" alt="quienes somos?" class="d-block w-100" >
-                    <div class="carousel-caption carousel-caption-custom text-light">
-                        <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 0.5s;">Resultados</h5>
-                        <p class="animate__animated animate__bounceInLeft d-none d-md-block" style="animation-delay: 1s;">Hacemos un seguimiento de los resultados de todos nuestros proyectos una vez insertos en el mercado.</p>
-                        <p class="animate__animated animate__bounceInRight" style="animation-delay: 2s;"><a href="#">Ver más</a></p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselHome" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </header>
-    <section id="section2" class="container mw-100 d-flex flex-column justify-content-around mb-5">
-        <h2 class="row justify-content-center pt-4 mb-3">¿Por qué elegirnos?</h2>
-        <div class="row d-flex justify-content-around mb-5">
-            <div class="col-lg-3 d-flex flex-column justify-content-center">
-                <img class="img-fluid align-self-center" src="./images/diseno.png" alt="diseño" width="250">
-                <h3 class="align-self-center m-3">Diseño</h3>
-                <p class="align-self-center w-75">
-                Desde el diseño de interfaces intuitivas hasta la creación de experiencias visuales envolventes, nuestro enfoque es transformar ideas en realidades digitales impactantes. Con un equipo diverso y experto, exploramos constantemente nuevas tecnologías y tendencias para asegurar que cada trabajo refleje innovación y excelencia.
-                </p>
-            </div>
-            <div class="col-lg-3 d-flex flex-column justify-content-center">
-                <img class="img-fluid align-self-center" src="./images/metricas.png" alt="métricas" width="250">
-                <h3 class="align-self-center m-3">Métricas</h3>
-                <p class="align-self-center w-75">Entendemos la importancia de las métricas para evaluar el impacto y la eficacia de cada proyecto. Utilizamos herramientas analíticas avanzadas para medir la interacción del usuario, el tiempo de permanencia y otros indicadores clave que nos permiten optimizar continuamente nuestras creaciones.
-                </p>
-            </div>
-            <div class="col-lg-3 d-flex flex-column justify-content-center">
-                <img class="img-fluid align-self-center" src="./images/tecnologia.png" alt="tecnologia" width="250">
-                <h3 class="align-self-center m-3">Tecnología</h3>
-                <p class="align-self-center w-75">Abrazamos la tecnología como el motor de nuestra creatividad. Nos mantenemos a la vanguardia de las últimas innovaciones tecnológicas para ofrecer soluciones digitales avanzadas y experiencias multimedia inmersivas. Realidad aumentada, inteligencia artificial, y mucho más.
-                </p>
-            </div>
-            <div class="col-lg-3 d-flex flex-column justify-content-center">
-                <img class="img-fluid align-self-center" src="./images/creatividad.png" alt="creatividad" width="250">
-                <h3 class="align-self-center m-3">Creatividad</h3>
-                <p class="align-self-center w-75">En nuestro estudio, la creatividad es el corazón de todo lo que hacemos. Nos inspiramos en desafíos complejos para idear soluciones innovadoras y originales que cautiven y conecten con nuestro público. Fomentamos un ambiente donde la imaginación florezca, combinando talento creativo con técnicas avanzadas para ofrecer experiencias visuales.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="section3" class="container mw-100 bg-black">
-        <div class="row">
-            <div class="col-xxl-6 p-5 pb-2 ps-6">
-                <h2 class="ps-2 pb-5 text-white">¿Quiénes somos?</h2>
-                <article class="ps-2 text-light">
-                    <p class="pb-3">
-                    ¡Bienvenido al mundo del diseño multimedial! En nuestra agencia, somos más que un equipo de creativos, somos una familia de mentes jóvenes y apasionadas que viven y respiran diseño las 24 horas del día, los 7 días de la semana. Desde el amanecer hasta el atardecer digital, nos sumergimos en un océano de colores, formas y código para crear experiencias que cautivan, sorprenden y deleitan.
-                    </p>
-                    <p class="pb-3">
-                    ¿Qué nos hace diferentes? Bueno, aparte de nuestra obsesión por el diseño, también nos encanta desafiar los límites y pensar fuera de la caja. No nos conformamos con lo ordinario; siempre estamos buscando nuevas formas de innovar y destacarnos en el vasto y competitivo mundo digital. ¿El resultado? Proyectos que no solo cumplen, sino que superan las expectativas de nuestros clientes una y otra vez.
-                    </p>
-                    <p class="pb-3">
-                    En nuestra guarida digital, la diversión es tan importante como el trabajo duro. Creemos que un ambiente creativo y descontracturado es fundamental para fomentar la innovación y la colaboración. Por eso, cada día es una aventura emocionante llena de risas, ideas locas y momentos de pura inspiración. Nos encanta lo que hacemos, y eso se refleja en cada proyecto que emprendemos.
-                    </p>
-                    <p class="pb-3">
-                    Pero no se equivoquen, aunque nos encanta divertirnos, también somos extremadamente serios cuando se trata de ofrecer resultados. Nuestro equipo está formado por algunos de los mejores talentos en el mundo del diseño multimedial, y estamos comprometidos a ofrecer soluciones creativas y efectivas que no solo llamen la atención, sino que también generen resultados tangibles para nuestros clientes.
-                    </p>
-                    <p class="pb-3">
-                    Entonces, ¿qué podemos hacer por ti? Bueno, prácticamente cualquier cosa relacionada con el diseño multimedial. Desde el diseño de sitios web impresionantes hasta la creación de contenido visualmente impactante, estamos listos para ayudarte a llevar tu presencia en línea al siguiente nivel. Nuestros servicios incluyen diseño web, desarrollo de aplicaciones, animación, diseño de interfaces de usuario, branding, marketing digital ¡y mucho más!
-                    </p>
-                    <p class="pb-3">
-                    Pero eso no es todo. En nuestra agencia, nos enorgullecemos de nuestra capacidad para entender las necesidades únicas de cada cliente y adaptar nuestras soluciones para satisfacer sus objetivos específicos. No creemos en enfoques de talla única; cada proyecto es tratado con la atención y el cuidado que se merece para garantizar resultados excepcionales.
-                    </p>
-                </article>
-            </div>
-            <div class="col-xxl-6 p-0">    
-                <img class="img-fluid" src="images/quienes_somos_.jpg" alt="1er grupo de personas">
-                <img class="img-fluid" src="images/quienes_somos_2_.jpg" alt="2do grupo de personas">
-            </div>
-        </div>
-    </section>
-    <section id="section4" class="container-xl mw-100">
-        <div class="row">
-            <div class="col-xl-7 p-0">
-                <img class="img-fluid" src="images/wwa.jpg" alt="Contactanos!">
-            </div>
-            <div class="col-xl-5 d-flex flex-column align-items-center justify-content-evenly">
-                <h2 class="row justify-content-center mt-3 mb-3">Contactanos!</h2>
-                <form class="w-75">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingNameInputValue" value="">
-                        <label for="floatingNameInputValue">Nombre</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingSubnameInputValue" value="">
-                        <label for="floatingSubnameInputValue">Apellido</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="">
-                        <label for="floatingInputValue">Mail</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Comentario</label>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary mb-3">Enviar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-    <section id="section5" class="container-fluid mw-100 bg-dark text-light">
-        <h2 class="row justify-content-center pt-4 mb-3">Nuestro canal</h2>
-        <div class="row justify-content-center text-light video-text-intro p-3">Podés ver los trabajos que realizamos, testimonios y distintos recursos que subimos en youtube. Seguinos!</div>
-        <div class="ratio ratio-4x3 p-5">
-            <iframe src="https://www.youtube.com/embed/kMi_0HXXaTE?si=mjuRiYz99F0DBi--" title="YouTube video" allowfullscreen></iframe>
-          </div>
-    </section>
-    <footer class="container-fluid mw-100 bg-dark text-light" style="height: 10vh;">
-        <div class="d-flex align-items-center justify-content-around p-3">
-            <div class="d-flex text-footer">Martín Giménez - DMN2BV</div>
-            <div class="d-flex">
-                <div class="ms-3">
-                    <a href="https://www.instagram.com/">
-                        <img class="social-media-elements" src="images/logo-instagram.svg" alt="Instagram" width="50">
-                    </a>
-                </div>
-                <div class="ms-3">
-                    <a href="https://www.whatsapp.com/?lang=es_LA">
-                        <img class="social-media-elements" src="images/logo-wsp.svg" alt="whatsapp-logo" width="50">
-                    </a>
-                </div>
-                <div class="ms-3">
-                    <a href="https://web.telegram.org/k/">
-                        <img class="social-media-elements" src="images/logo-telegram.svg" alt="telegram" width="50">
-                    </a>
+                <div class="bloque-2">
+                    <img src="./recursos/billetera.svg" height="250" alt="billetera">
                 </div>
             </div>
         </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous">    
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-</body>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar nuevo movimiento</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 <div class="form carga-movimiento">    
+                    <div style="margin-bottom: 25px;">
+                        <p>Tipo de movimiento</p>
+                        <select class="form-select" aria-label="Default select example" id="tipoMovimiento">
+                            <option selected>Elegí de la lista</option>
+                            <option value="1">Ingreso</option>
+                            <option value="2">Gasto</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="movimientoTitulo" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="movimientoTitulo" >
+                    </div>
+
+                    <div style="margin-bottom: 25px;">
+                        <p>Categoria</p>
+                        <select class="form-select" aria-label="Default select example" id="categoria">
+                            <option selected>Elegí la categoria</option>
+                            <option value="1">Ahorro</option>
+                            <option value="2">Ocio</option>
+                            <option value="3">Gastos mensuales</option>
+                            <option value="4">Gastos hormiga</option>
+                            <option value="5">Sueldo</option>
+                            <option value="6">Inversión</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="monto" class="form-label">Monto</label>
+                        <input type="number" class="form-control" id="monto" >
+                    </div>
+                 </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-primary" onclick="modificarMovimientos('agregar')">Agregar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <footer class="footer text-white">
+            <span class="align-middle">Copyright Mi billetera® 2024</span>
+            <button id="mostrar" type="button" class="btn btn-primary btn-sm" onclick="mostrarInformacion()" >Información</button>
+            <button id="ocultar" type="button" class="btn btn-secondary btn-sm" onclick="ocultarInformacion()" >Ver menos</button>
+        </footer>
+        <section class="mas-informacion" id="informacion">
+            <div class="mi-contenedor d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-between">
+                    <div class="flex-column align-items-center">
+                        <img src="./recursos/maca.jpg" alt="Macarena Perez Manazzoni" height="350">
+                        <h4>Macarena Perez Manazzoni</h4>
+                    </div>
+                    <div class="flex-column align-items-center">
+                        <img src="./recursos/martin.jpg" alt="Martin Gimenez Tauriz" height="350">
+                        <h4>Martin Gimenez Tauriz</h4>
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-center text-white align-items-end">
+                    <p>Turno Noche - Comisión A - 2024</p>
+                    <h3>Diseño Multimedial</h3>
+                    <p>Diseño y programación web </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
